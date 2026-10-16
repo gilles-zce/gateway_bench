@@ -1,0 +1,12 @@
+{
+  "server_crt": "../../test_pki/out/server_chain.crt",
+  "server_key": "../../test_pki/out/server.key",
+  "ca_root": "../../test_pki/out/root_ca.crt",
+  "ota_file": "../../../zce_plug_workspace/ZCE_PLUG_MQTT/build_debug/ZCE_PLUG_mqtt_n16r8.bin",
+  "host": "0.0.0.0",
+  "port": 9444,
+  "renew_provisioner": "device-identity",
+  "renew_not_after": "",
+  "renew_omit_not_after": false,
+  "python": ""
+}

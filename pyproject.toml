@@ -1,0 +1,29 @@
+[project]
+name = "gateway-bench"
+version = "0.1.0"
+description = "Banc gateway : pilotage de la PKI de test (step-ca, WSL) et de la gateway mTLS app_server.py (OTA terrain, renouvellement d'identité)"
+authors = [
+    {name = "Gilles Durant",email = "gilles.durant@zero-carbon-emission.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13,<3.14"
+dependencies = [
+    "kivy (>=2.3.1,<3.0.0)",
+    "cryptography (>=44.0.0)"
+]
+
+[project.scripts]
+gateway-bench = "gateway_bench.__main__:main"
+
+[tool.poetry]
+packages = [{include = "gateway_bench", from = "src"}]
+
+[tool.poetry.group.dev.dependencies]
+pytest = ">=8.3"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
